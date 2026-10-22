@@ -20,14 +20,16 @@ const TodoItem = ({id, isDone, content, date}) => {
                 onChange={onChangeCheckbox}
             />
 
-            <div className="content">{content}</div>
+            <div className="content">
+                <span className="item-emoji">{isDone ? "💖" : "🌸"}</span> {content}
+            </div>
 
             <div className="date">
                 {new Date(date).toLocaleString()}
             </div>
 
             <button onClick={() => dispatch(deleteTodo(id))}>
-                삭제 🗑️
+                삭제 💔
             </button>
         </div>
     );

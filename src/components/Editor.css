@@ -1,11 +1,12 @@
 .Editor {
     display: flex;
-    gap: 10px;
+    gap: 14px;
 }
 
 .Editor input {
     flex: 1;
-    padding: 14px 18px;
+    padding: 14px 28px;
+    font-size: 20px;
     color: var(--text);
     border: 2px solid var(--pink-light);
     border-radius: 999px;
@@ -25,7 +26,8 @@
 
 .Editor button {
     cursor: pointer;
-    width: 84px;
+    width: 130px;
+    font-size: 20px;
     border: none;
     color: white;
     background: linear-gradient(135deg, var(--pink), var(--pink-deep));

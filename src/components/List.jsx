@@ -28,9 +28,22 @@ function List() {
 
     const filteredTodos = getFilteredData();
 
+    const mood = totalCount === 0
+        ? {face: "🥺", text: "할 일이 아직 없어요~ 하나 적어볼까요?"}
+        : notDoneCount === 0
+            ? {face: "🥳", text: "와아! 오늘 할 일 전부 끝! 최고예요 👑"}
+            : doneCount === 0
+                ? {face: "😤", text: "시작이 반이에요! 화이팅 💪"}
+                : {face: "😊", text: `잘하고 있어요! ${notDoneCount}개만 더 해볼까요? 💕`};
+
     return (
         <div className="List">
             <h4>Todo List 🌸</h4>
+
+            <div className="mood">
+                <span className="mood-face">{mood.face}</span>
+                <span className="mood-text">{mood.text}</span>
+            </div>
 
             <div className="todo-stats">
                 <div className="stat-item">
@@ -54,6 +67,9 @@ function List() {
             />
 
             <div className="todos_wrapper">
+                {filteredTodos.length === 0 && (
+                    <div className="empty">🌷 여기엔 아무것도 없어요 🌷</div>
+                )}
                 {filteredTodos.map((todo) => {
                     return (
                         <TodoItem

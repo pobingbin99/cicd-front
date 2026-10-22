@@ -1,0 +1,36 @@
+.Decor {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.Decor > span {
+    position: absolute;
+    bottom: -80px;
+    opacity: 0.75;
+    animation: rise linear infinite;
+}
+
+.Decor > .corner {
+    bottom: auto;
+    font-size: 64px;
+    opacity: 1;
+    animation: wiggle 2.5s ease-in-out infinite;
+}
+
+.corner.tl { top: 12px; left: 16px; }
+.corner.tr { top: 12px; right: 16px; }
+.corner.bl { bottom: 12px; left: 16px; }
+.corner.br { bottom: 12px; right: 16px; }
+
+@keyframes rise {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(-115vh) rotate(360deg); }
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(-8deg) scale(1); }
+    50% { transform: rotate(8deg) scale(1.15); }
+}

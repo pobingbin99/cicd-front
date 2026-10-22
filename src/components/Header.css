@@ -1,34 +1,49 @@
 .Header {
     text-align: center;
-    position: relative;
 }
 
 .Header::before {
     content: '👑';
     display: block;
-    font-size: 36px;
+    font-size: 44px;
+    line-height: 1.1;
     animation: float 3s ease-in-out infinite;
 }
 
 .Header > h3 {
-    margin: 4px 0;
-    font-size: 24px;
+    margin: 0 0 8px;
+    font-size: 32px;
     font-weight: normal;
-    color: var(--pink-deep);
+    background: linear-gradient(90deg, var(--pink-deep), var(--lavender), var(--pink-deep));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shine 4s linear infinite;
 }
 
 .Header > h1 {
-    margin: 4px 0 0;
+    margin: 0;
     display: inline-block;
-    padding: 6px 18px;
-    font-size: 16px;
+    padding: 6px 22px;
+    font-size: 18px;
     font-weight: normal;
     color: #fff;
     background: linear-gradient(90deg, var(--pink), var(--lavender));
     border-radius: 999px;
+    box-shadow: 0 5px 0 #d97bb0;
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0) rotate(-6deg); }
-    50% { transform: translateY(-6px) rotate(6deg); }
+    0%, 100% { transform: translateY(0) rotate(-8deg); }
+    50% { transform: translateY(-12px) rotate(8deg); }
+}
+
+@keyframes shine {
+    to { background-position: 200% center; }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
 }

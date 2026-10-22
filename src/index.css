@@ -36,3 +36,8 @@ input, button {
 ::selection {
     background: var(--pink-light);
 }
+
+#root {
+    position: relative;
+    z-index: 1;
+}

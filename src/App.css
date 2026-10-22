@@ -1,13 +1,23 @@
 .App {
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    width: 500px;
+    gap: 12px;
+    width: 780px;
     max-width: calc(100% - 24px);
-    margin: 32px auto;
-    padding: 28px 24px;
-    background: rgba(255, 255, 255, 0.85);
-    border: 3px solid var(--pink-light);
-    border-radius: 32px;
-    box-shadow: 0 12px 40px rgba(255, 143, 184, 0.35);
+    margin: 16px auto;
+    height: calc(100vh - 32px);
+    padding: 20px 36px 24px;
+    font-size: 20px;
+    background: rgba(255, 255, 255, 0.88);
+    border: 6px dotted var(--pink);
+    border-radius: 48px;
+    box-shadow:
+        0 0 0 8px rgba(255, 255, 255, 0.7),
+        0 20px 60px rgba(255, 92, 154, 0.4);
+    animation: pop-in 0.6s cubic-bezier(.2, 1.6, .4, 1);
+}
+
+@keyframes pop-in {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }
