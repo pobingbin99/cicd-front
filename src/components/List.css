@@ -1,0 +1,77 @@
+.List {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.List > h4 {
+    margin: 8px 0 0;
+    font-size: 20px;
+    font-weight: normal;
+    color: var(--pink-deep);
+}
+
+.List > input {
+    width: 100%;
+    padding: 12px 18px;
+    color: var(--text);
+    border: 2px dashed var(--pink-light);
+    border-radius: 999px;
+    background: transparent;
+    outline: none;
+}
+
+.List > input:focus {
+    border-style: solid;
+    border-color: var(--lavender);
+}
+
+.List > .todos_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.todo-stats {
+    display: flex;
+    gap: 10px;
+    margin: 0;
+}
+
+.stat-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 12px 8px;
+    border-radius: 20px;
+    background-color: var(--pink-light);
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #a37890;
+}
+
+.stat-count {
+    font-size: 24px;
+    color: var(--pink-deep);
+}
+
+.stat-item.done {
+    background-color: #dff7ee;
+}
+
+.stat-item.done .stat-count {
+    color: #4cc29b;
+}
+
+.stat-item.not-done {
+    background-color: #fff0cf;
+}
+
+.stat-item.not-done .stat-count {
+    color: #f0a530;
+}

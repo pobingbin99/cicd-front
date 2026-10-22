@@ -1,0 +1,44 @@
+.Editor {
+    display: flex;
+    gap: 10px;
+}
+
+.Editor input {
+    flex: 1;
+    padding: 14px 18px;
+    color: var(--text);
+    border: 2px solid var(--pink-light);
+    border-radius: 999px;
+    background: var(--pink-pale);
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.Editor input:focus {
+    border-color: var(--pink);
+    box-shadow: 0 0 0 4px rgba(255, 143, 184, 0.2);
+}
+
+.Editor input::placeholder {
+    color: #d9a7bd;
+}
+
+.Editor button {
+    cursor: pointer;
+    width: 84px;
+    border: none;
+    color: white;
+    background: linear-gradient(135deg, var(--pink), var(--pink-deep));
+    border-radius: 999px;
+    box-shadow: 0 4px 0 #e0457f;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.Editor button:hover {
+    transform: translateY(-1px);
+}
+
+.Editor button:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 #e0457f;
+}

@@ -1,0 +1,70 @@
+.TodoItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: var(--pink-pale);
+    border: 2px solid var(--pink-light);
+    border-radius: 20px;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.TodoItem:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(255, 143, 184, 0.25);
+}
+
+.TodoItem input {
+    appearance: none;
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    cursor: pointer;
+    border: 2px solid var(--pink);
+    border-radius: 50%;
+    background: #fff;
+    display: grid;
+    place-items: center;
+}
+
+.TodoItem input:checked {
+    background: var(--pink);
+}
+
+.TodoItem input:checked::after {
+    content: '♥';
+    color: #fff;
+    font-size: 14px;
+}
+
+.TodoItem .content {
+    flex: 1;
+    word-break: break-all;
+}
+
+.TodoItem input:checked + .content {
+    text-decoration: line-through;
+    color: #d3b3c3;
+}
+
+.TodoItem .date {
+    font-size: 11px;
+    color: #c9a3b8;
+    text-align: right;
+}
+
+.TodoItem button {
+    cursor: pointer;
+    color: #fff;
+    font-size: 13px;
+    border: none;
+    border-radius: 999px;
+    padding: 6px 12px;
+    background: var(--lavender);
+    transition: background 0.2s;
+}
+
+.TodoItem button:hover {
+    background: var(--pink-deep);
+}
